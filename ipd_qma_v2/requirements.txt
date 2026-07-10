@@ -1,0 +1,10 @@
+# IPD-QMA v2 runtime dependencies.
+# Lower bounds match the validated environment (Python 3.13); upper bounds
+# guard against major-version drift in libraries whose numerics the analysis
+# depends on (scipy/statsmodels QuantReg + pooling).
+numpy>=2.0,<3
+pandas>=2.0,<3
+scipy>=1.11,<2
+statsmodels>=0.14,<0.16
+matplotlib>=3.7,<4
+python-docx>=1.0,<2   # only needed for build_docx.py
